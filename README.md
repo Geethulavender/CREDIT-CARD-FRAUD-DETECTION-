@@ -40,4 +40,19 @@ The dataset used is the [Credit Card Fraud Detection dataset](https://www.kaggle
    - Precision, Recall, F1-Score  
    - ROC-AUC
 
+## 🔍 Key Results and Metrics
+
+After applying SMOTE to handle the class imbalance and evaluating three different machine learning models, the following performance was observed on the test set:
+
+| Model               | Accuracy | Precision (Fraud) | Recall (Fraud) | F1-score (Fraud) | AUC Score |
+|---------------------|----------|-------------------|----------------|------------------|-----------|
+| **Logistic Regression** | 97.32%   | 5.59%             | 91.84%         | 10.53%           | 0.9706    |
+| **Random Forest**       | 99.95%   | 87.10%            | 82.65%         | 84.82%           | 0.9839    |
+| **XGBoost**             | 99.91%   | 70.00%            | 85.71%         | 77.06%           | 0.9751    |
+
+**Highlights:**
+- **Random Forest** performed best in terms of overall balance between precision and recall.
+- **Logistic Regression** had very high recall but very low precision, leading to many false positives.
+- **XGBoost** also showed good recall but slightly lower precision than Random Forest.
+- All models had AUC > 0.97, indicating strong discriminatory power between fraud and non-fraud cases.
 
